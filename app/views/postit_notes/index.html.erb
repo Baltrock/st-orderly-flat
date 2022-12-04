@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Postit notes</h1>
+
+<div id="postit_notes">
+  <% @postit_notes.each do |postit_note| %>
+    <%= render postit_note %>
+    <p>
+      <%= link_to "Show this postit note", postit_note %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New postit note", new_postit_note_path %>

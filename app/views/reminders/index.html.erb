@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Reminders</h1>
+
+<div id="reminders">
+  <% @reminders.each do |reminder| %>
+    <%= render reminder %>
+    <p>
+      <%= link_to "Show this reminder", reminder %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New reminder", new_reminder_path %><br>
+<%= link_to "Back to the main page", user_registration_url, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %>

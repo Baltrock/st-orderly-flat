@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @postit_note %>
+
+<div>
+  <%= link_to "Edit this postit note", edit_postit_note_path(@postit_note) %> |
+  <%= link_to "Back to postit notes", postit_notes_path %>
+
+  <%= button_to "Destroy this postit note", @postit_note, method: :delete %>
+</div>
